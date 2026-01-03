@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucidity - Clarity in Complexity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(100, 200, 255, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            line-height: 1.8;
+            color: #d0d0d0;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .stats-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .mission-section {
+            padding: 6rem 2rem;
+            background: #1a1a2e;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mission-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mission-card {
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .mission-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(10px);
+        }
+
+        .mission-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .mission-card p {
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+
+        .content-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0a 100%);
+        }
+
+        .content-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .content-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .content-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .content-body {
+            padding: 2rem;
+        }
+
+        .content-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(102, 126, 234, 0.2);
+            color: #667eea;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-card p {
+            color: #a0a0a0;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        .footer {
+            padding: 4rem 2rem 2rem;
+            background: #0a0a0a;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        .footer-copyright {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid,
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1>Lucidity</h1>
+            <p class="hero-subtitle">Clarity in Complexity</p>
+            <p class="hero-description">
+                Founded by a 16-year-old student from rural France, Lucidity is an intellectual platform empowering young people aged 15–20 to develop clarity of thought in an increasingly complex world.
+            </p>
+            <a href="https://substack.com/@paulbossard" target="_blank" class="cta-button">Read Our Essays</a>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Published Articles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">16</div>
+                <div class="stat-label">Age of Founder</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100</div>
+                <div class="stat-label">% Free Access</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2025</div>
+                <div class="stat-label">Year Founded</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <h2 class="section-title">Our Mission</h2>
+        <div class="mission-grid">
+            <div class="mission-card">
+                <h3>🎓 Educational Clarity</h3>
+                <p>We demystify complex education systems, helping students navigate their academic journeys with confidence and make informed decisions about their futures.</p>
+            </div>
+            <div class="mission-card">
+                <h3>🤖 AI Literacy</h3>
+                <p>Empowering young people to understand artificial intelligence not as a distant concept, but as a transformative force shaping their generation's opportunities.</p>
+            </div>
+            <div class="mission-card">
+                <h3>🌍 Social Mobility</h3>
+                <p>Breaking down informational barriers that perpetuate inequality, with special focus on students from rural and underrepresented backgrounds.</p>
+            </div>
+            <div class="mission-card">
+                <h3>🧭 Strategic Thinking</h3>
+                <p>Teaching frameworks for long-term decision-making that enable thoughtful, independent choices in an uncertain world.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2 class="section-title">Latest Insights</h2>
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="content-image">🌍</div>
+                <div class="content-body">
+                    <span class="content-category">Founder's Story</span>
+                    <h3>Why I Created Lucidity at 16, from a Small Village in France</h3>
+                    <p>The personal journey of founding an intellectual platform from rural France, and why geographic location shouldn't limit ambition or access to knowledge.</p>
+                    <a href="https://substack.com/@paulbossard/p-181975143" target="_blank" class="read-more">Read Article →</a>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="content-image">💭</div>
+                <div class="content-body">
+                    <span class="content-category">Generation & Purpose</span>
+                    <h3>Why Our Generation Feels Lost and Why That's Not a Weakness</h3>
+                    <p>An honest exploration of uncertainty in young people today, and how feeling lost can actually be a strength in navigating an unpredictable future.</p>
+                    <a href="https://substack.com/@paulbossard/p-182701811" target="_blank" class="read-more">Read Article →</a>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="content-image">📚</div>
+                <div class="content-body">
+                    <span class="content-category">Coming Soon</span>
+                    <h3>More Insights Coming</h3>
+                    <p>Deep dives on education systems, decision-making frameworks, social mobility, and navigating complexity as a young person in 2025.</p>
+                    <a href="https://substack.com/@paulbossard" target="_blank" class="read-more">Follow on Substack →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://substack.com/@paulbossard" target="_blank">Substack</a>
+            <a href="mailto:contact@lucidity.org">Contact</a>
+        </div>
+        <p class="footer-copyright">© 2025 Lucidity. Empowering clarity of thought.</p>
+    </footer>
+
+    <script>
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 5 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                
+                particle.style.animation = `float ${duration}s ${delay}s infinite`;
+                container.appendChild(particle);
+            }
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% {
+                    transform: translate(0, 0);
+                    opacity: 0;
+                }
+                10% { opacity: 1; }
+                90% { opacity: 1; }
+                100% {
+                    transform: translate(${Math.random() * 100 - 50}px, -100vh);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        window.addEventListener('load', createParticles);
+    </script>
+</body>
+</html>
