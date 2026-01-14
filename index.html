@@ -64,7 +64,7 @@
         .hero h1 {
             font-size: clamp(3rem, 8vw, 5rem);
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -72,18 +72,31 @@
             animation: fadeInUp 1s ease-out;
         }
 
-        .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.5rem);
-            color: #a0a0a0;
-            margin-bottom: 2rem;
+        .hero-main-message {
+            font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-weight: 500;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        .hero-description {
-            font-size: clamp(1rem, 2vw, 1.1rem);
-            line-height: 1.8;
+        .hero-founder {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: #a0a0a0;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-for-who {
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
             color: #d0d0d0;
+            line-height: 1.7;
             margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            border-left: 3px solid #667eea;
             animation: fadeInUp 1s ease-out 0.4s both;
         }
 
@@ -117,55 +130,9 @@
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
         }
 
-        .stats-section {
+        .about-section {
             padding: 6rem 2rem;
-            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #a0a0a0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .mission-section {
-            padding: 6rem 2rem;
-            background: #1a1a2e;
+            background: #0a0a0a;
         }
 
         .section-title {
@@ -178,44 +145,42 @@
             background-clip: text;
         }
 
-        .mission-grid {
-            max-width: 1200px;
+        .about-content {
+            max-width: 900px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .mission-card {
-            padding: 2.5rem;
             background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
             border-radius: 20px;
             border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
         }
 
-        .mission-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateX(10px);
-        }
-
-        .mission-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        .about-section-subtitle {
+            font-size: 1.4rem;
             color: #667eea;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
-        .mission-card p {
-            line-height: 1.8;
+        .about-text {
+            font-size: 1.1rem;
             color: #d0d0d0;
+            line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
-        .content-section {
+        .about-divider {
+            margin: 2.5rem 0;
+            border: none;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .key-essays-section {
             padding: 6rem 2rem;
-            background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0a 100%);
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
         }
 
-        .content-grid {
+        .essays-grid {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
@@ -223,7 +188,7 @@
             gap: 2rem;
         }
 
-        .content-card {
+        .essay-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             overflow: hidden;
@@ -231,12 +196,12 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .content-card:hover {
+        .essay-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
         }
 
-        .content-image {
+        .essay-image {
             width: 100%;
             height: 200px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -246,11 +211,11 @@
             font-size: 3rem;
         }
 
-        .content-body {
+        .essay-body {
             padding: 2rem;
         }
 
-        .content-category {
+        .essay-category {
             display: inline-block;
             padding: 0.5rem 1rem;
             background: rgba(102, 126, 234, 0.2);
@@ -260,15 +225,24 @@
             margin-bottom: 1rem;
         }
 
-        .content-card h3 {
+        .essay-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
-        .content-card p {
+        .essay-card p {
             color: #a0a0a0;
             line-height: 1.6;
             margin-bottom: 1rem;
+        }
+
+        .essay-context {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #888;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .read-more {
@@ -282,10 +256,79 @@
             color: #764ba2;
         }
 
+        .impact-section {
+            padding: 6rem 2rem;
+            background: #1a1a2e;
+        }
+
+        .impact-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .impact-stat {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+
+        .impact-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-stat-label {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0a 100%);
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            color: #d0d0d0;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+        }
+
         .footer {
             padding: 4rem 2rem 2rem;
             background: #0a0a0a;
             text-align: center;
+        }
+
+        .footer-about {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+
+        .footer-name {
+            color: #667eea;
+            font-weight: 600;
         }
 
         .footer-links {
@@ -312,8 +355,7 @@
         }
 
         @media (max-width: 768px) {
-            .content-grid,
-            .mission-grid {
+            .essays-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -324,206 +366,166 @@
         <div class="particles" id="particles"></div>
         <div class="hero-content">
             <h1>Lucidity</h1>
-            <p class="hero-subtitle">Clarity in Complexity</p>
-            <p class="hero-description">
-                Founded by a 16-year-old student from rural France, Lucidity is an intellectual platform empowering young people aged 15–20 to develop clarity of thought in an increasingly complex world.
+            <p class="hero-main-message">
+                Exploring how access to information — not intelligence — shapes educational and life trajectories, especially for students outside major urban centers.
             </p>
-            <a href="https://substack.com/@paulbossard" target="_blank" class="cta-button">Read Our Essays</a>
-        </div>
-    </section>
-
-    <section class="stats-section">
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="stat-number">93</div>
-                <div class="stat-label">Subscribers</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">900+</div>
-                <div class="stat-label">Total Views</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">2.5K</div>
-                <div class="stat-label">Impressions</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">7</div>
-                <div class="stat-label">Published Essays</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About/Mission Section with Paul's Story -->
-    <section class="stats-section" style="background: #0a0a0a;">
-        <div style="max-width: 900px; margin: 0 auto;">
-            <h2 class="section-title">Why Lucidity Exists</h2>
-            <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem; border-radius: 20px; border-left: 4px solid #667eea;">
-                <p style="font-size: 1.2rem; color: #d0d0d0; line-height: 1.9; margin-bottom: 1.5rem;">
-                    At 16, I discovered that my postal code was determining my future more than my potential.
-                </p>
-                <p style="font-size: 1.1rem; color: #d0d0d0; line-height: 1.8; margin-bottom: 1.5rem;">
-                    Growing up in a French village of 500, I had internet access and a decent high school. By conventional metrics, I should have had equal opportunities.
-                </p>
-                <p style="font-size: 1.1rem; color: #d0d0d0; line-height: 1.8; margin-bottom: 1.5rem;">
-                    But at 15, I'd never heard of liberal arts colleges, the Rhodes Scholarship, research opportunities, or how networking works. Not because I lacked ambition—but because information inequality is invisible.
-                </p>
-                <p style="font-size: 1.1rem; color: #d0d0d0; line-height: 1.8; margin-bottom: 1.5rem;">
-                    <strong style="color: #667eea;">Lucidity exists to change that.</strong>
-                </p>
-                <p style="font-size: 1.1rem; color: #d0d0d0; line-height: 1.8;">
-                    Through rigorous, accessible essays, I'm building the resource I wish I'd had—helping young people (15-20) develop clarity about education, decisions, AI, and the skills that actually matter.
-                </p>
-                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <p style="color: #a0a0a0; font-style: italic;">
-                        "You can't search for what you don't know exists. Lucidity makes the invisible visible."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="mission-section">
-        <h2 class="section-title">Our Mission</h2>
-        <div class="mission-grid">
-            <div class="mission-card">
-                <h3>🎓 Educational Clarity</h3>
-                <p>We demystify complex education systems, helping students navigate their academic journeys with confidence and make informed decisions about their futures.</p>
-            </div>
-            <div class="mission-card">
-                <h3>🤖 AI Literacy</h3>
-                <p>Empowering young people to understand artificial intelligence not as a distant concept, but as a transformative force shaping their generation's opportunities.</p>
-            </div>
-            <div class="mission-card">
-                <h3>🌍 Social Mobility</h3>
-                <p>Breaking down informational barriers that perpetuate inequality, with special focus on students from rural and underrepresented backgrounds.</p>
-            </div>
-            <div class="mission-card">
-                <h3>🧭 Strategic Thinking</h3>
-                <p>Teaching frameworks for long-term decision-making that enable thoughtful, independent choices in an uncertain world.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof / Momentum Section -->
-    <section class="stats-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 2rem;">
-        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: white;">Growing Every Week</h2>
-            <p style="font-size: 1.3rem; color: rgba(255,255,255,0.95); line-height: 1.8; margin-bottom: 2rem;">
-                0 to 93 subscribers in just weeks. 900+ views, 2,500+ impressions. 
-                <br>+232% growth in 36 hours. Built by a 16-year-old from rural France.
+            <p class="hero-founder">
+                Founded by Paul Bossard, 16, rural France
             </p>
-            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 2rem;">
-                <div>
-                    <div style="font-size: 3rem; font-weight: 700; color: white;">93</div>
-                    <div style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Subscribers</div>
+            <div class="hero-for-who">
+                <strong>Who Lucidity Is For:</strong> Students navigating complex educational systems without a map — especially those from rural or underexposed backgrounds.
+            </div>
+            <a href="https://substack.com/@paulbossard" target="_blank" class="cta-button">Read the Essays</a>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <h2 class="section-title">Why Lucidity Exists</h2>
+        <div class="about-content">
+            <h3 class="about-section-subtitle">Where I'm Coming From</h3>
+            <p class="about-text">
+                I grew up in a French village of 500 people. I had internet access, a decent high school, and ambition. By conventional metrics, I should have had equal opportunities.
+            </p>
+            
+            <hr class="about-divider">
+            
+            <h3 class="about-section-subtitle">The Problem I Noticed</h3>
+            <p class="about-text">
+                At 15, I'd never heard of liberal arts colleges, the Rhodes Scholarship, research opportunities, or how networking actually works. Not because I lacked intelligence or drive — but because information inequality is invisible. My postal code was determining my future more than my potential.
+            </p>
+            <p class="about-text">
+                Students in Paris learn about these opportunities casually, through conversations at dinner tables or with well-connected teachers. Students in rural areas discover them years too late, if at all. This isn't about motivation or talent. It's about knowing what questions to ask — and you can't search for what you don't know exists.
+            </p>
+            
+            <hr class="about-divider">
+            
+            <h3 class="about-section-subtitle">What Lucidity Does</h3>
+            <p class="about-text">
+                Through rigorous, accessible essays, I'm building the resource I wish I'd had at 15. Lucidity helps young people aged 15-20 develop clarity about education systems, decision-making frameworks, AI literacy, and the skills that actually matter for their futures.
+            </p>
+            <p class="about-text">
+                This isn't motivational content. It's analytical, evidence-based writing that makes invisible advantages visible and helps students make informed decisions about their trajectories.
+            </p>
+            
+            <hr class="about-divider">
+            
+            <h3 class="about-section-subtitle">What I'm Still Figuring Out</h3>
+            <p class="about-text">
+                I'm 16. I don't have all the answers, and I'm not claiming to be an expert. What I do have is recent, lived experience of these information gaps — and the drive to build something that helps others navigate them earlier than I did.
+            </p>
+            <p class="about-text" style="font-style: italic; color: #a0a0a0; margin-bottom: 0;">
+                "You can't search for what you don't know exists. Lucidity makes the invisible visible."
+            </p>
+        </div>
+    </section>
+
+    <section class="key-essays-section">
+        <h2 class="section-title">Key Essays</h2>
+        <div class="essays-grid">
+            <div class="essay-card">
+                <div class="essay-image">🌍</div>
+                <div class="essay-body">
+                    <span class="essay-category">Foundational</span>
+                    <h3>The Rural Information Gap</h3>
+                    <p>How postal codes determine futures more than potential. The invisible mechanisms of information inequality and what they don't tell you about geographic disadvantage.</p>
+                    <p class="essay-context">Part of Lucidity's broader exploration of how information inequality shapes educational outcomes.</p>
+                    <a href="https://substack.com/@paulbossard/p-183360228" target="_blank" class="read-more">Read Essay →</a>
                 </div>
-                <div>
-                    <div style="font-size: 3rem; font-weight: 700; color: white;">+232%</div>
-                    <div style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Growth in 36h</div>
+            </div>
+            
+            <div class="essay-card">
+                <div class="essay-image">🔨</div>
+                <div class="essay-body">
+                    <span class="essay-category">Building in Public</span>
+                    <h3>What Building Lucidity at 16 Has Taught Me</h3>
+                    <p>The honest version. What I thought would be hard wasn't. What was actually hard blindsided me. The mistakes, unexpected wins, and why ideas are easy but execution is everything.</p>
+                    <p class="essay-context">Part of Lucidity's broader exploration of how information inequality shapes educational outcomes.</p>
+                    <a href="https://substack.com/@paulbossard/p-184066756" target="_blank" class="read-more">Read Essay →</a>
                 </div>
-                <div>
-                    <div style="font-size: 3rem; font-weight: 700; color: white;">2.5K</div>
-                    <div style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Impressions</div>
+            </div>
+            
+            <div class="essay-card">
+                <div class="essay-image">📚</div>
+                <div class="essay-body">
+                    <span class="essay-category">Education</span>
+                    <h3>The Hidden Curriculum</h3>
+                    <p>The 7 critical skills school systematically doesn't teach — long-term thinking, strategic decisions, self-directed learning, and the frameworks that actually determine life outcomes.</p>
+                    <p class="essay-context">Part of Lucidity's broader exploration of how information inequality shapes educational outcomes.</p>
+                    <a href="https://substack.com/@paulbossard/p-183431852" target="_blank" class="read-more">Read Essay →</a>
+                </div>
+            </div>
+            
+            <div class="essay-card">
+                <div class="essay-image">🤖</div>
+                <div class="essay-body">
+                    <span class="essay-category">AI & Future</span>
+                    <h3>AI Won't Take Your Job</h3>
+                    <p>But someone using AI will. What young people actually need to know about AI literacy — beyond the hype, grounded in what matters for your generation.</p>
+                    <p class="essay-context">Part of Lucidity's broader exploration of how information inequality shapes educational outcomes.</p>
+                    <a href="https://substack.com/@paulbossard/p-183431346" target="_blank" class="read-more">Read Essay →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Signup Section -->
-    <section class="stats-section" style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 class="section-title" style="margin-bottom: 1.5rem;">Join the Clarity Movement</h2>
-            <p style="font-size: 1.2rem; color: #d0d0d0; margin-bottom: 2rem; line-height: 1.8;">
-                Get weekly essays on education, decision-making, and long-term thinking. 
-                <br>Free forever. No spam. Join 93+ readers navigating complexity with clarity.
+    <section class="impact-section">
+        <div class="impact-content">
+            <h2 class="section-title">Early Impact</h2>
+            <p style="font-size: 1.2rem; color: #d0d0d0; line-height: 1.8; margin-bottom: 2rem;">
+                From zero to meaningful reach in weeks. Built entirely by a 16-year-old from rural France.
             </p>
+            <div class="impact-stats">
+                <div class="impact-stat">
+                    <div class="impact-stat-number">120+</div>
+                    <div class="impact-stat-label">Subscribers</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-stat-number">1,000+</div>
+                    <div class="impact-stat-label">Essay Views</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-stat-number">10+</div>
+                    <div class="impact-stat-label">Countries Reached</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-stat-number">2.5K+</div>
+                    <div class="impact-stat-label">Impressions</div>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; color: #a0a0a0; font-style: italic;">
+                Messages from students navigating similar challenges. Readers finding clarity they didn't have access to before.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="section-title">Join Lucidity</h2>
+            <div class="cta-text">
+                If you're a student from a rural or underexposed background and this resonated, you're exactly who Lucidity is for. Subscribe to receive essays on education, decision-making, and the frameworks that actually matter for your future. No fluff, no motivation — just clarity.
+            </div>
             <a href="https://substack.com/@paulbossard" target="_blank" class="cta-button" style="font-size: 1.2rem; padding: 1.2rem 3.5rem;">
                 Subscribe Free
             </a>
             <p style="margin-top: 1.5rem; color: #a0a0a0; font-size: 0.95rem;">
-                Join readers across 10+ countries navigating complexity with clarity
+                Join 120+ readers navigating complexity with clarity
             </p>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <h2 class="section-title">Featured Essays</h2>
-        
-        <!-- Highlighted Latest Essay -->
-        <div style="max-width: 1000px; margin: 0 auto 4rem;">
-            <div style="background: rgba(102, 126, 234, 0.1); padding: 3rem; border-radius: 20px; border: 2px solid rgba(102, 126, 234, 0.3);">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <span style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">✨ LATEST</span>
-                    <span class="content-category">Building in Public</span>
-                </div>
-                <h3 style="font-size: 2rem; margin-bottom: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                    What Building Lucidity at 16 Has Taught Me
-                </h3>
-                <p style="font-size: 1.2rem; color: #d0d0d0; line-height: 1.8; margin-bottom: 1.5rem;">
-                    The honest, unfiltered version. What I thought would be hard (wasn't). What was actually hard (blindsided me). The mistakes, unexpected wins, and why ideas are easy but execution is everything.
-                </p>
-                <a href="https://substack.com/@paulbossard/p-184066756" target="_blank" class="cta-button" style="display: inline-block;">Read Now →</a>
-            </div>
-        </div>
-
-        <!-- Other Essays Grid -->
-        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem; color: #d0d0d0;">All Essays</h3>
-        <div class="content-grid">
-            <div class="content-card">
-                <div class="content-image">📚</div>
-                <div class="content-body">
-                    <span class="content-category">Education</span>
-                    <h3>The Hidden Curriculum</h3>
-                    <p>The 7 critical skills school systematically doesn't teach—long-term thinking, strategic decisions, self-directed learning, and more.</p>
-                    <a href="https://substack.com/@paulbossard/p-183431852" target="_blank" class="read-more">Read Essay →</a>
-                </div>
-            </div>
-            <div class="content-card">
-                <div class="content-image">🎯</div>
-                <div class="content-body">
-                    <span class="content-category">Decision-Making</span>
-                    <h3>The Paradox of Choice</h3>
-                    <p>Why more opportunities make decisions harder. Maximizers vs satisficers, and a framework for better choices.</p>
-                    <a href="https://substack.com/@paulbossard/p-183431611" target="_blank" class="read-more">Read Essay →</a>
-                </div>
-            </div>
-            <div class="content-card">
-                <div class="content-image">🤖</div>
-                <div class="content-body">
-                    <span class="content-category">AI & Future</span>
-                    <h3>AI Won't Take Your Job</h3>
-                    <p>But someone using AI will. What young people actually need to know about AI literacy—beyond the hype.</p>
-                    <a href="https://substack.com/@paulbossard/p-183431346" target="_blank" class="read-more">Read Essay →</a>
-                </div>
-            </div>
-            <div class="content-card">
-                <div class="content-image">🌍</div>
-                <div class="content-body">
-                    <span class="content-category">Inequality</span>
-                    <h3>The Rural Information Gap</h3>
-                    <p>How postal codes determine futures more than potential. What they don't tell you about geographic inequality.</p>
-                    <a href="https://substack.com/@paulbossard/p-183360228" target="_blank" class="read-more">Read Essay →</a>
-                </div>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="https://substack.com/@paulbossard" target="_blank" class="cta-button">Read All Essays</a>
         </div>
     </section>
 
     <footer class="footer">
+        <div class="footer-about">
+            <p>
+                Founded by <span class="footer-name">Paul Bossard</span>, 16, from rural France. 
+                Lucidity exists to make invisible advantages visible and help young people develop clarity about their educational trajectories.
+            </p>
+        </div>
         <div class="footer-links">
-            <a href="https://substack.com/@paulbossard" target="_blank">Essays</a>
+            <a href="https://substack.com/@paulbossard" target="_blank">All Essays</a>
             <a href="https://substack.com/@paulbossard" target="_blank">Subscribe</a>
             <a href="mailto:paul.lucidity@gmail.com">Contact</a>
         </div>
-        <div style="margin: 2rem 0;">
-            <p style="color: #a0a0a0; font-size: 0.95rem; max-width: 600px; margin: 0 auto 1rem; line-height: 1.6;">
-                Founded by Paul Bossard, 16, from rural France. 
-                <br>Helping young people develop clarity of thought about their futures.
-            </p>
-        </div>
-        <p class="footer-copyright">© 2025 Lucidity. Empowering clarity of thought. Built with purpose from a village of 500.</p>
+        <p class="footer-copyright">© 2025 Lucidity. Built with purpose from a village of 500.</p>
     </footer>
 
     <script>
